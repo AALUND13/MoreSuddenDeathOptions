@@ -2,8 +2,6 @@
 
 Adds additional and customizable Sudden Death triggers for **Map Embiggener**, allowing more control over when the map begins to close in.
 
----
-
 ## **How It Work**
 
 This mod completely overrides **Map Embiggener** built-in Sudden Death logic.
@@ -13,8 +11,6 @@ This mod completely overrides **Map Embiggener** built-in Sudden Death logic.
 - Each Sudden Death Option has its own conditions and settings.
 - During gameplay, if **any** enabled Sudden Death Option returns `true`, the map border will begin closing.
   This system allows you to control the **Sudden Death** conditions.
-
----
 
 ## **Available Options**
 
@@ -32,8 +28,6 @@ This option triggers Sudden Death depending on the number of **alive players**.
   Once active, Sudden Death will trigger when the number of **alive players** is
   **less than or equal to** this value.
 
----
-
 ### **2. Trigger Based on Time**
 
 This option triggers Sudden Death after a set amount of time has passed in the round.
@@ -43,7 +37,6 @@ This option triggers Sudden Death after a set amount of time has passed in the r
 - **Trigger When N Seconds Have Passed**
   Once the round has been running for this many seconds, Sudden Death will be triggered.
 
----
 
 ## Notes
 
