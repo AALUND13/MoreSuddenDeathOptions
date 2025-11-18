@@ -12,15 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f53b16b43f44db45911ff17aee4901d, type: 3}
   m_Name: More Sudden Death Options Info
   m_EditorClassIdentifier: 
-  ModName: More Sudden Death Options Info
-  Author: 
+  ModName: More Sudden Death Options
+  Author: AALUND13
   Version: 1.0.0
   WebsiteURL: https://github.com/AALUND13/MoreSuddenDeathOptions
   Description: Adds additional and customizable Sudden Death triggers for "Map Embiggener",
     allowing more control over when the map begins to close in.
   BeforeBuildCommand: 
   AfterBuildCommand: 
-  Dependencies: []
+  Dependencies:
+  - willis81808-UnboundLib-3.2.14
+  - Pykess-Map_Embiggener-2.2.0
   DllDependencies: []
   AssemblyDefinitionDependencies: []
   Icon: {fileID: 2800000, guid: 49880152da00010498a28893e1a47f54, type: 3}
