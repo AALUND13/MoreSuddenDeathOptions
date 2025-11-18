@@ -10,7 +10,8 @@ This mod completely overrides **Map Embiggener** built-in Sudden Death logic.
 - All Sudden Death behavior is instead controlled by **custom Sudden Death Options**.
 - Each Sudden Death Option has its own conditions and settings.
 - During gameplay, if **any** enabled Sudden Death Option returns `true`, the map border will begin closing.
-  This system allows you to control the **Sudden Death** conditions.
+
+This system allows you to control the **Sudden Death** conditions.
 
 ## **Available Options**
 

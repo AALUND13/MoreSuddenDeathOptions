@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModName: More_Sudden_Death_Options
   Author: AALUND13
-  Version: 1.0.0
+  Version: 1.0.1
   WebsiteURL: https://github.com/AALUND13/MoreSuddenDeathOptions
   Description: Adds additional and customizable Sudden Death triggers for "Map Embiggener",
     allowing more control over when the map begins to close in.
