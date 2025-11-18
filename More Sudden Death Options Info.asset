@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f53b16b43f44db45911ff17aee4901d, type: 3}
   m_Name: More Sudden Death Options Info
   m_EditorClassIdentifier: 
-  ModName: More Sudden Death Options
+  ModName: More_Sudden_Death_Options
   Author: AALUND13
   Version: 1.0.0
   WebsiteURL: https://github.com/AALUND13/MoreSuddenDeathOptions
