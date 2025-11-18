@@ -6,13 +6,21 @@ using UnboundLib;
 namespace MoreSuddenDeathOptions.Utils {
     public static class SuddenDeathUtils {
         public static void ActivateSuddenDeath(DefaultBoundsController boundsController, bool toggle) {
-            if((bool)boundsController.GetFieldValue("battleOnGoing") && toggle) {
-                boundsController.SetPropertyValue("MaxXTarget", DefaultBoundsController.ClosingFrac * OutOfBoundsUtils.defaultX * ControllerManager.MapSize * ControllerManager.Zoom / (MapManager.instance?.currentMap?.Map?.size ?? 1f));
-                boundsController.SetPropertyValue("MinXTarget", -DefaultBoundsController.ClosingFrac * OutOfBoundsUtils.defaultX * ControllerManager.MapSize * ControllerManager.Zoom / (MapManager.instance?.currentMap?.Map?.size ?? 1f));
-                boundsController.SetPropertyValue("MaxYTarget", 0f);
-                boundsController.SetPropertyValue("MinYTarget", 0f);
-                boundsController.SetPropertyValue("ParticleGravityTarget", -0.1f);
-                boundsController.SetPropertyValue("ParticleGravitySpeed", null);
+            if((bool)boundsController.GetFieldValue("battleOnGoing")) {
+                if(toggle) {
+                    boundsController.SetPropertyValue("MaxXTarget", DefaultBoundsController.ClosingFrac * OutOfBoundsUtils.defaultX * ControllerManager.MapSize * ControllerManager.Zoom / (MapManager.instance?.currentMap?.Map?.size ?? 1f));
+                    boundsController.SetPropertyValue("MinXTarget", -DefaultBoundsController.ClosingFrac * OutOfBoundsUtils.defaultX * ControllerManager.MapSize * ControllerManager.Zoom / (MapManager.instance?.currentMap?.Map?.size ?? 1f));
+                    boundsController.SetPropertyValue("MaxYTarget", 0f);
+                    boundsController.SetPropertyValue("MinYTarget", 0f);
+                    boundsController.SetPropertyValue("ParticleGravityTarget", -0.1f);
+                } else {
+                    boundsController.SetPropertyValue("MaxXTarget", OutOfBoundsUtils.defaultX * ControllerManager.MapSize);
+                    boundsController.SetPropertyValue("MinXTarget", -OutOfBoundsUtils.defaultX * ControllerManager.MapSize);
+                    boundsController.SetPropertyValue("MaxYTarget", OutOfBoundsUtils.defaultY * ControllerManager.MapSize);
+                    boundsController.SetPropertyValue("MinYTarget", -OutOfBoundsUtils.defaultY * ControllerManager.MapSize);
+                    boundsController.SetPropertyValue("ParticleGravityTarget", null);
+                    boundsController.SetPropertyValue("AngularSpeed", null);
+                }
 
                 boundsController.SetPropertyValue("XSpeed", DefaultBoundsController.SuddenDeathXSpeed);
                 boundsController.SetPropertyValue("YSpeed", DefaultBoundsController.SuddenDeathYSpeed);
@@ -22,12 +30,11 @@ namespace MoreSuddenDeathOptions.Utils {
                 boundsController.SetPropertyValue("MaxYTarget", OutOfBoundsUtils.defaultY * ControllerManager.MapSize);
                 boundsController.SetPropertyValue("MinYTarget", -OutOfBoundsUtils.defaultY * ControllerManager.MapSize);
                 boundsController.SetPropertyValue("ParticleGravityTarget", null);
-                boundsController.SetPropertyValue("ParticleGravitySpeed", null);
-
                 boundsController.SetPropertyValue("XSpeed", null);
                 boundsController.SetPropertyValue("YSpeed", null);
-                boundsController.SetPropertyValue("AngularSpeed", null);
             }
+
+            boundsController.SetPropertyValue("ParticleGravitySpeed", null);
             boundsController.SetPropertyValue("AngleTarget", 0f);
         }
 
