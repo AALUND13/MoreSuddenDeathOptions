@@ -18,8 +18,7 @@ namespace MoreSuddenDeathOptions.Utils {
                     boundsController.SetPropertyValue("MinXTarget", -OutOfBoundsUtils.defaultX * ControllerManager.MapSize);
                     boundsController.SetPropertyValue("MaxYTarget", OutOfBoundsUtils.defaultY * ControllerManager.MapSize);
                     boundsController.SetPropertyValue("MinYTarget", -OutOfBoundsUtils.defaultY * ControllerManager.MapSize);
-                    boundsController.SetPropertyValue("ParticleGravityTarget", null);
-                    boundsController.SetPropertyValue("AngularSpeed", null);
+                    boundsController.SetPropertyValue("ParticleGravityTarget", 0f);
                 }
 
                 boundsController.SetPropertyValue("XSpeed", DefaultBoundsController.SuddenDeathXSpeed);
@@ -36,6 +35,7 @@ namespace MoreSuddenDeathOptions.Utils {
 
             boundsController.SetPropertyValue("ParticleGravitySpeed", null);
             boundsController.SetPropertyValue("AngleTarget", 0f);
+            boundsController.SetPropertyValue("AngularSpeed", null);
         }
 
         public static void ActivateSuddenDeathCamera(DefaultCameraController cameraController, bool toggle) {

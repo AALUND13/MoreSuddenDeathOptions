@@ -10,7 +10,6 @@ using UnityEngine;
 namespace MoreSuddenDeathOptions.Options {
     public class SuddenDeathOptionsManager : MonoBehaviour {
         private readonly Dictionary<Type, SuddenDeathOption> options = new Dictionary<Type, SuddenDeathOption>();
-        private readonly Dictionary<string, SuddenDeathOption> optionKeyMaps = new Dictionary<string, SuddenDeathOption>();
 
         public IEnumerable<SuddenDeathOption> Options => options.Values;
         public static SuddenDeathOptionsManager Instance { get; private set; }
@@ -28,7 +27,6 @@ namespace MoreSuddenDeathOptions.Options {
 
             T option = new T();
             options.Add(t, option);
-            optionKeyMaps.Add(option.Name, option);
         }
 
         public T GetOptionByType<T>() where T : SuddenDeathOption {
