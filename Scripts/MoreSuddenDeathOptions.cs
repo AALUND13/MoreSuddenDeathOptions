@@ -33,7 +33,10 @@ namespace MoreSuddenDeathOptions {
         }
 
         private void Start() {
-            Unbound.RegisterMenu(ModName, () => { }, SuddenDeathMenuManager.Instance.CreateAllMenus, null, false);
+            this.ExecuteAfterFrames(5, () => {
+                SuddenDeathMenuManager.Instance.InitializeMenus();
+                Unbound.RegisterMenu(ModName, null, SuddenDeathMenuManager.Instance.CreateAllMenus, null, false);
+            });
         }
     }
 }

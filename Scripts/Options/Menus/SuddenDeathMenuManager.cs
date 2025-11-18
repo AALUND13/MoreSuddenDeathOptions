@@ -23,8 +23,6 @@ namespace MoreSuddenDeathOptions.Options.Menus {
 
 
         internal void CreateAllMenus(GameObject parent) {
-            InitializeMenus();
-
             MenuHandler.CreateText($"<b>{MoreSuddenDeathOptions.ModName}</b>", parent, out TextMeshProUGUI _, 70);
             MenuHandler.CreateText(" ", parent, out TextMeshProUGUI _, 50);
 
