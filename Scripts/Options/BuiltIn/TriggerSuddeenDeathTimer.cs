@@ -27,11 +27,11 @@ namespace MoreSuddenDeathOptions.Options.BuiltIn {
         }
 
         public override bool ActivateSuddenDeath() {
-            return Enable && Time.time > LastSetTime + TriggerWhenNTimePass;
+            return Enable && Time.unscaledTime > LastSetTime + TriggerWhenNTimePass;
         }
 
         public override void OnReset() {
-            LastSetTime = Time.time;
+            LastSetTime = Time.unscaledTime;
         }
 
         public override void SetDataToSync() {

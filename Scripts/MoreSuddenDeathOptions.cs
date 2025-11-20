@@ -12,7 +12,7 @@ using UnityEngine;
 namespace MoreSuddenDeathOptions {
     [BepInDependency("com.willis.rounds.unbound", BepInDependency.DependencyFlags.HardDependency)]
     [BepInDependency("pykess.rounds.plugins.mapembiggener", BepInDependency.DependencyFlags.HardDependency)]
-    [BepInPlugin(ModId, ModName, "1.0.2")]
+    [BepInPlugin(ModId, ModName, "1.0.3")]
     [BepInProcess("Rounds.exe")]
     public class MoreSuddenDeathOptions : BaseUnityPlugin {
         internal const string ModId = "com.aalund13.rounds.more_sudden_death_options";
